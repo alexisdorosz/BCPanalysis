@@ -1,0 +1,38 @@
+{
+  "name": "bcp-analysis",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local BCP collection and Wahapedia study sheets for Age of Sigmar 4",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "app": "node --import tsx src/app.ts",
+    "validate:corpus": "node --import tsx src/validate-corpus.ts",
+    "build": "vite build --config vite.config.ts",
+    "collect": "node --import tsx src/cli.ts collect",
+    "report": "node --import tsx src/cli.ts report",
+    "inspect": "node --import tsx src/cli.ts inspect",
+    "example": "node --import tsx src/cli.ts inspect fixtures/lumineth.txt",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:browser": "node --import tsx --test test/browser.integration.ts test/app.integration.ts"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.0",
+    "fastify": "^5.0.0",
+    "playwright": "^1.58.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}

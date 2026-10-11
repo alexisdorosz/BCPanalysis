@@ -1,0 +1,319 @@
+@font-face {
+  font-family: 'Wahapedia Minion';
+  src: url('/wahapedia/MinionPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Wahapedia Minion';
+  src: url('/wahapedia/MinionPro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+.rule-section {
+  margin-top: 36px;
+  min-width: 0;
+}
+.rule-section-heading {
+  border-bottom: 1px solid #b8b7ad;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+}
+.rule-section-heading h3 {
+  color: #24261f;
+  font:
+    700 29px/1.15 'Wahapedia Minion',
+    'Times New Roman',
+    serif;
+  text-transform: uppercase;
+}
+.rule-section-heading p {
+  font:
+    400 22px/1.3 'Wahapedia Minion',
+    'Times New Roman',
+    serif;
+  color: #635f50;
+  margin-top: 7px;
+}
+.rule-prose {
+  font:
+    16px/1.5 'Times New Roman',
+    Times,
+    serif;
+  color: #191919;
+  margin: 0 0 22px;
+}
+.rule-prose h4 {
+  font:
+    700 21px/1.25 'Wahapedia Minion',
+    'Times New Roman',
+    serif;
+  margin-bottom: 10px;
+}
+.rule-prose > div {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.rule-prose > .rule-prose-rich {
+  white-space: normal;
+}
+.rule-prose-rich table {
+  width: 100%;
+  max-width: 480px;
+  margin: 12px 0;
+  font: inherit;
+}
+.rule-prose-rich td,
+.rule-prose-rich th {
+  white-space: normal;
+  font: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.rule-prose-rich p {
+  margin-bottom: 12px;
+}
+.rule-prose-rich ul,
+.rule-prose-rich ol {
+  padding-left: 24px;
+  margin: 10px 0;
+}
+.rule-prose-rich .ability-keyword {
+  font-size: 0.825em;
+}
+.rule-prose .source-link {
+  display: inline-block;
+  margin-top: 7px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.ability-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+  gap: 25px 20px;
+  align-items: start;
+  padding-top: 7px;
+}
+.ability {
+  --ability-color: #000000;
+  font:
+    17.6px/normal 'Times New Roman',
+    Times,
+    serif;
+  color: #000;
+  min-width: 0;
+  break-inside: avoid;
+  text-rendering: optimizeLegibility;
+  font-variant: lining-nums;
+}
+.ability-color-000000 {
+  --ability-color: #000000;
+}
+.ability-color-76602b {
+  --ability-color: #76602b;
+}
+.ability-color-606362 {
+  --ability-color: #606362;
+}
+.ability-color-5e4a79 {
+  --ability-color: #5e4a79;
+}
+.ability-color-802022 {
+  --ability-color: #802022;
+}
+.ability-color-28435c {
+  --ability-color: #28435c;
+}
+.ability-color-3d5b26 {
+  --ability-color: #3d5b26;
+}
+.ability-color-a34d14 {
+  --ability-color: #a34d14;
+}
+.ability-header {
+  position: relative;
+  margin: 0 10px;
+  background: var(--ability-color);
+  color: #fefefe;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 1px 0 3px;
+  min-height: 28px;
+}
+.ability-header::before,
+.ability-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: var(--ability-color);
+  mask-repeat: repeat-y;
+  mask-size: 10px auto;
+}
+.ability-header::before {
+  left: -10px;
+  mask-image: url('/wahapedia/abCutLeft.png');
+}
+.ability-header::after {
+  right: -10px;
+  mask-image: url('/wahapedia/abCutRight.png');
+}
+.ability-header.has-badge {
+  padding-right: 51px;
+}
+.ability-icon {
+  position: relative;
+  top: 3px;
+  padding-right: 4px;
+  vertical-align: baseline;
+}
+.ability-badge {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-weight: 700;
+}
+.ability-badge span {
+  position: relative;
+  display: block;
+}
+.ability-badge-spell {
+  top: -14px;
+  right: -6px;
+  height: 57px;
+  width: 57px;
+  background-image: url('/wahapedia/abSpellPoints1.png');
+  color: #dadada;
+  font-size: 1.63636em;
+}
+.ability-badge-spell span {
+  top: 9px;
+}
+.ability-badge-prayer {
+  top: -16px;
+  right: -11px;
+  height: 61px;
+  width: 55px;
+  background-image: url('/wahapedia/abPrayerPoints.png');
+  color: #dadada;
+  font-size: 1.63636em;
+}
+.ability-badge-prayer span {
+  top: 10px;
+}
+.ability-badge-command {
+  top: -13px;
+  right: -4px;
+  height: 56px;
+  width: 47px;
+  background-image: url('/wahapedia/abCommandPoints1.png');
+  color: #101010;
+  font-size: 1.77273em;
+}
+.ability-badge-command span {
+  top: 7px;
+}
+.ability-body {
+  padding: 8px;
+  margin: 0 10px;
+  border: solid var(--ability-color);
+  border-width: 0 1px 1px;
+  background: #fff;
+  overflow-wrap: break-word;
+}
+.ability-body h4 {
+  display: inline;
+  font: inherit;
+  font-weight: 700;
+}
+.ability-reaction .ability-body,
+.ability-reaction .ability-keywords {
+  background-color: #dee2e1;
+}
+.ability-body p {
+  margin: 0 0 1em;
+}
+.ability-spacer {
+  height: 7px;
+}
+.ability-body ul,
+.ability-body ol {
+  padding-left: 24px;
+  margin: 0.6em 0;
+}
+.ability-body table {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  white-space: normal;
+  margin: 8px 0;
+}
+.ability-body th,
+.ability-body td {
+  font: inherit;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  border-color: #ccc;
+  padding: 4px;
+}
+.ability-body th {
+  font-weight: 700;
+}
+.ability-body a {
+  color: #255eff;
+}
+.ability-keyword {
+  font:
+    700 0.75em/0.95 'Wahapedia Minion',
+    'Times New Roman',
+    serif;
+  font-style: normal;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.ability-keyword::first-letter {
+  font-size: 1.35em;
+}
+.ability-keywords {
+  display: flex;
+  border: solid var(--ability-color);
+  border-width: 0 1px 1px;
+  margin: 0 10px;
+  background: #fff;
+}
+.ability-keywords-label {
+  flex: 0 0 104px;
+  text-align: center;
+  padding: 4px;
+  font-size: 1.1em;
+  font-weight: 700;
+  background: var(--ability-color);
+  color: #fefefe;
+}
+.ability-keywords-values {
+  padding: 4px;
+}
+.ability-source {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 10px 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+@media (max-width: 620px) {
+  .rule-section-heading h3 {
+    font-size: 26px;
+  }
+  .rule-section-heading p {
+    font-size: 20px;
+  }
+  .ability-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ability {
+    font-size: 16px;
+  }
+}
